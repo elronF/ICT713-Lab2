@@ -5,4 +5,5 @@
     <asp:Label ID="lblDayTwo" runat="server" Text="Day 2"></asp:Label><asp:TextBox ID="txtDayTwo" runat="server" ReadOnly="True"></asp:TextBox>
     <asp:Label ID="lblDayThree" runat="server" Text="Day 3"></asp:Label><asp:TextBox ID="txtDayThree" runat="server" ReadOnly="True"></asp:TextBox>
     <asp:Button ID="btnCalReturn" runat="server" Text="Back to Calendar" PostBackUrl="~/calendar.aspx" />
+    <asp:Label ID="lblForgot" runat="server" Text=""></asp:Label>
 </asp:Content>

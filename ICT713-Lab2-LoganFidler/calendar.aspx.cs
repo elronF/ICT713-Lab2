@@ -55,12 +55,12 @@ namespace ICT713_Lab2_LoganFidler
         protected void btnVote_Click(object sender, EventArgs e)
         {
             int result = GetVoteResult(); // get the vote
-            string errorMessage = "You forgot to vote";
             Application.Lock();
             switch (result) // increment counter based on vote result and store in appropriate application state variable.
             {
                 case 0:
-                    Application["ErrorMessage"] = errorMessage;
+                    string errorMessage = Convert.ToString(Application["ErrorMessage"]);
+                    Application["ErrorMessage"] = "You forgot to vote";
                     break;
                 case 1:
                     int dayOneCount = Convert.ToInt32(Application["dayOneCounter"]);

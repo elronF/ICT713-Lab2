@@ -28,6 +28,14 @@ namespace ICT713_Lab2_LoganFidler
                 txtDayThree.Text = Application["dayThreeCounter"].ToString();
             else
                 txtDayThree.Text = "No votes";
+
+            if (Application["errorMessage"] != null)
+            {
+                lblForgot.Text = Application["errorMessage"].ToString();
+                Application["errorMessage"] = null;
+            }
+            else
+                lblForgot.Text = "";
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ICT713_Lab2_LoganFidler.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/stylesheet.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="container">    
+    <form id="form1" runat="server">
+        <header>
+            <h1>Date Picker!</h1>
+        </header>
+        <main>
+            <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            <small>Important footer information</small>
+        </footer>
+    </form>
+</div>
+</body>
+</html>

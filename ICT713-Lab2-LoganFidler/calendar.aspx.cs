@@ -10,7 +10,7 @@ namespace ICT713_Lab2_LoganFidler
     public partial class Default : System.Web.UI.Page
     {
         // form level variable declarations
-        DateTime today = DateTime.Today; // Today's date
+        DateTime today = DateTime.Today;
         DayOfWeek saturday = DayOfWeek.Saturday;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -44,17 +44,17 @@ namespace ICT713_Lab2_LoganFidler
             }
         }
 
+        // behavior when user changes the selected date on the calendar
         protected void calVote_SelectionChanged(object sender, EventArgs e)
         {
             string currentDate = calVote.SelectedDate.Date.ToShortDateString();
             calVote.SelectedDayStyle.BackColor = System.Drawing.Color.Orange;
             lblCurrentSelection.Text = "You've selected " + currentDate;
-
         }
 
         protected void btnVote_Click(object sender, EventArgs e)
         {
-            int result = GetVoteResult(); // get the vote
+            int result = GetVoteResult(); // get the vote results based on user entry
             Application.Lock();
             switch (result) // increment counter based on vote result and store in appropriate application state variable.
             {
@@ -78,10 +78,6 @@ namespace ICT713_Lab2_LoganFidler
                     Application["dayThreeCounter"] = dayThreeCount;
                     break;
             }
-
-            //if (Application["dayOneCounter"] != null)
-            //    lblCurrentSelection.Text = Application["dayOneCounter"].ToString();
-
             Application.UnLock();
             Response.Redirect("~/votes.aspx");
 
@@ -108,7 +104,7 @@ namespace ICT713_Lab2_LoganFidler
             {
                 result = 3;
             }
-            else
+            else // result if user forgets to vote
             {
                 result = 0;
             }

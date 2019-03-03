@@ -12,17 +12,26 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-<div class="container">    
+<div class="container">
     <form id="form1" runat="server">
-        <header>
-            <h1>Date Picker!</h1>
-        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="calendar.aspx">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="votes.aspx">Vote Tally</a>
+            </div>
+        </nav>
+        <div class="jumbotron text-light">
+            <h1>Party Date Planner</h1>
+            <p>Choose the date that works best for you!</p>
+        </div>
         <main>
-            <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
-            </asp:ContentPlaceHolder>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </main>
         <footer>
-            <small>Important footer information</small>
+            <small>ICT713 Lab 2 - Built with Visual Studio 2017 by Logan Fidler</small>
         </footer>
     </form>
 </div>

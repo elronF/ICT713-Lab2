@@ -22,15 +22,6 @@ namespace ICT713_Lab2_LoganFidler {
         protected global::System.Web.UI.WebControls.Calendar calVote;
         
         /// <summary>
-        /// lblCurrentSelection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCurrentSelection;
-        
-        /// <summary>
         /// btnVote control.
         /// </summary>
         /// <remarks>
@@ -38,5 +29,14 @@ namespace ICT713_Lab2_LoganFidler {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnVote;
+        
+        /// <summary>
+        /// lblCurrentSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrentSelection;
     }
 }

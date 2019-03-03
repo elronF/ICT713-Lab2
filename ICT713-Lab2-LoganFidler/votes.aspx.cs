@@ -29,6 +29,7 @@ namespace ICT713_Lab2_LoganFidler
             else
                 txtDayThree.Text = "No votes";
 
+            // error message formatting
             if (Application["errorMessage"] != null)
             {
                 lblForgot.Text = Application["errorMessage"].ToString();
